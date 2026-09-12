@@ -81,7 +81,7 @@ Python 3.10
 
 Apache 2.0 License
 
-**Made by Sadpainy, Only Handwritten**
+**Made by OvO**
 
 ## Notes
 
