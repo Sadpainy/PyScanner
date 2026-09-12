@@ -3,7 +3,7 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=plastic&logo=linux&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=plastic&logo=python&logoColor=white)
 ![Build Passing](https://img.shields.io/badge/build-passing-brightgreen?style=plastic)
-![Termux](https://img.shields.io/badge/Termux-000000?style=plastic&logo=termux&logoColor=white&labelColor=555555)
+![Termux](https://img.shields.io/badge/Termux-000000?style=plastic&labelColor=555555)
 
 pyScanner is a domain reconnaissance tool written in Python. It takes a domain name and tells you what is behind it.
 
