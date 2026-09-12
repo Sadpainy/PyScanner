@@ -1,4 +1,4 @@
-# pyScanner
+# PyScanner
 ![Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-red?style=plastic)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=plastic&logo=linux&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=plastic&logo=python&logoColor=white)
