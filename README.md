@@ -4,6 +4,8 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=plastic&logo=python&logoColor=white)
 ![Build Passing](https://img.shields.io/badge/build-passing-brightgreen?style=plastic)
 ![Termux](https://img.shields.io/badge/Termux-000000?style=plastic&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im0xMC41IDI1LjMyNyAxMC4xMjcgNS44NTNMMTAuNSAzNy4wMzJtMjIgMEgyMS42NzMiLz48cmVjdCB3aWR0aD0iMzciIGhlaWdodD0iMzciIHg9IjUuNSIgeT0iNS41IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHJ4PSI0IiByeT0iNCIvPjwvc3ZnPg%3D%3D&logoColor=white&labelColor=555555)
+![Tests](https://img.shields.io/badge/Tests-passing-brightgreen?style=plastic&labelColor=555555)
+
 
 pyScanner is a domain reconnaissance tool written in Python. It takes a domain name and tells you what is behind it.
 
