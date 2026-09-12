@@ -75,9 +75,13 @@ python3 pyScanner.py --repl
 
 ## Requirements
 
-Python 3.10 or newer.
+Python 3.10
 
-No third-party packages.
+## License
+
+Apache 2.0 License
+
+**Made by Sadpainy, Only Handwritten**
 
 ## Notes
 
