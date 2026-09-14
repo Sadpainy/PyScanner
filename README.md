@@ -67,12 +67,6 @@ Export results to JSON.
 python3 pyScanner.py example.com -o result.json
 ```
 
-Start the interactive shell.
-
-```
-python3 pyScanner.py --repl
-```
-
 ## Requirements
 
 Python 3.10
