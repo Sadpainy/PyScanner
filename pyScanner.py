@@ -22,11 +22,13 @@ from pathlib import PurePosixPath
 from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor
 
+# Windows NTSTATUS
 STATUS_SUCCESS: typing.Final[int] = 0x00000000
 STATUS_UNSUCCESSFUL: typing.Final[int] = 0xC0000001
 STATUS_INVALID_PARAMETER: typing.Final[int] = 0xC000000D
 STATUS_ACCESS_DENIED: typing.Final[int] = 0xC0000022
 
+# Define Offsets
 OFF_MAGIC: typing.Final[int] = 0x0000
 OFF_VERSION: typing.Final[int] = 0x0004
 OFF_FLAGS: typing.Final[int] = 0x0006
@@ -107,7 +109,7 @@ class Endian(IntEnum):
     BIG = 0x00
     LITTLE = 0x01
 
-
+# Layout
 @dataclass(frozen=True, slots=True)
 class Layout:
     offset: int
@@ -158,7 +160,7 @@ VARIABLE_LAYOUT: typing.Final[Mapping[str, tuple[int, int, Field]]] = {
     "whois": (OFF_WHOIS, RECORD_SIZE - OFF_WHOIS, Field.WHOIS_LEN),
 }
 
-
+# Recording
 class RecordError(Exception):
     pass
 
@@ -250,7 +252,7 @@ class Record:
         host = self.get_bytes("host").decode(errors="ignore")
         return f"<Record host={host!r} status=0x{self[Field.STATUS]:08X} flags=0x{self[Field.FLAGS]:04X}>"
 
-
+# Status Code Back
 class StatusView:
     __slots__ = ("_record",)
 
@@ -284,7 +286,7 @@ NTSTATUS_NAMES: typing.Final[Mapping[int, str]] = {
     STATUS_ACCESS_DENIED: "STATUS_ACCESS_DENIED",
 }
 
-
+# Time Durations
 class Duration:
     __slots__ = ("_start",)
 
@@ -304,6 +306,7 @@ class Duration:
     def __exit__(self, *exc: object) -> None:
         return None
 
+# Address
 @dataclass(slots=True)
 class Address:
     ip: str
@@ -491,7 +494,7 @@ class LRUCache:
             "misses": self._misses,
         }
 
-
+# Define DNS Resolver
 class ResolverMetrics:
     __slots__ = ("_calls", "_failures", "_total_ms", "_lock")
 
@@ -812,7 +815,7 @@ class SocketFactory:
             s = ctx.wrap_socket(s, server_hostname=server_hostname)
         return s
 
-
+# Define HTTP Response and Parser
 @dataclass(slots=True)
 class RawHTTPResponse:
     version: str
@@ -941,7 +944,8 @@ class HTTPParser:
                 buf.extend(chunk)
             out.extend(buf[:size])
             buf = buf[size + 2:]
-            
+
+# Whois            
 class WhoisServerTable:
     __slots__ = ("_table", "_fallback")
 
@@ -1324,7 +1328,7 @@ def _extract_title(body: bytes, max_len: int = 256) -> Optional[str]:
     text = raw.decode(errors="ignore").strip()
     return text or None
 
-
+# TLS Fingerprint
 class TLSFingerprint:
     __slots__ = ("_alpn", "_ciphers")
 
@@ -1905,8 +1909,9 @@ class ResultAggregator:
                     },
                 }
             )
-        return out                                
-        
+        return out  
+                              
+# ANSI Colors       
 class ANSI:
     RESET = "\x1b[0m"
     BOLD = "\x1b[1m"
@@ -2842,6 +2847,6 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     finally:
         handler.restore()
 
-
+# Main
 if __name__ == "__main__":
     sys.exit(main())
